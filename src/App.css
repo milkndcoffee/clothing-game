@@ -14,8 +14,9 @@ img{
   height: 100%;
   object-fit: cover;
 }
-p{margin: 0;}
-button{font-family: unset;}
+p{margin: 0; font-size: 12pt;}
+button{font-family: unset; font-size: 12pt;}
+hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%; text-align: center;}
 
 .main-container{
   display: flex;
@@ -30,7 +31,9 @@ button{font-family: unset;}
 .container-header{
   
 }
-.softwares-container{
+
+/* Software Related */
+.software-grid-container{
   left: 0;
   top: 0;
   position:fixed;
@@ -46,16 +49,60 @@ button{font-family: unset;}
   margin: .2rem;
   text-align: center;
 }
+.software-container{
+  width: auto;
+  background-color: silver;
+  border-top: #dcdcdcc9 2.4px solid;
+  border-left: #b9b9b9c7 2.4px solid;
+  border-bottom: #3c3c3c 2.4px solid;
+  border-right: #3c3c3c 2.4px solid;
+}
+.software-container header{
+  position: relative;
+  background-color: rgb(110, 110, 110);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: white;
+  background-color: #0909a3;
+  padding: .1rem .2rem;
+} 
+.software-container header button{
+  width: 30px;
+  height: auto;
+  border-top: #dcdcdc 2.4px solid;
+  border-left: #929292 2.4px solid;
+  border-bottom: #3c3c3c 2.4px solid;
+  border-right: #3c3c3c 2.4px solid;
+  background-color: silver;
+}.software-container .toolbar {
+  padding: .1rem .2rem;
+}
+.software-container .toolbar button{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font-size: 10pt;
+}
+.software-container .software{
+  margin: .15rem;
+  border-top: #727272 2.4px solid;
+  border-left: #727272 2.4px solid;
+  border-bottom: #727272 2.4px solid;
+  border-right: #727272 2.4px solid;
+}
 
-/* TOOLBARS*/
-.toolbar-container{
+/* taskbar*/
+.taskbar-container{
   width: 100%;
   position: fixed;
   bottom: 0;
-  height: 5%;
+  height: 45px;
   align-self: end;
   display: flex; 
-  align-content: center;
+  align-items: center;
   background-color: silver;
   border-top: rgb(228, 228, 228) 2px solid;
   justify-content: space-between;
@@ -65,7 +112,7 @@ button{font-family: unset;}
   font-weight: 600;
 }
 
-
+/* CLOTHING-GAME */
 .game-container{
   background-color: rgb(128, 0, 100);
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const SoftwareGrid = (items) => {
   return (
-    <div className='softwares-container'>
+    <div className='software-grid-container'>
       <p>{items.length} </p>
       <div className='thumbnail-container'>
         <img className='thumbnail-template'></img>

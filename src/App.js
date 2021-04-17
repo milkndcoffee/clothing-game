@@ -1,8 +1,9 @@
 import './App.css';
 import Header from './components/Header.js';
 import Game from './components/Game.js';
-import Toolbar from './components/Toolbar.js';
+import Taskbar from './components/Taskbar.js';
 import SoftwareGrid from './components/SoftwareGrid';
+import SoftwareTemplate from './components/SoftwareTemplate';
 
 const state = {
   softwares:[
@@ -22,8 +23,8 @@ function App() {
     <div className="main-container">
       <Header />
       <SoftwareGrid items={state} />
-      <Game />
-      <Toolbar />
+      <SoftwareTemplate />
+      <Taskbar />
     </div>
   );
 }

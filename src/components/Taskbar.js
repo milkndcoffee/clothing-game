@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Toolbar = () => {
+const Taskbar = () => {
   return (
-    <div className='toolbar-container'>
+    <div className='taskbar-container'>
       <button className='start-menu-button'>START</button>
       <p>time to shleep</p>
     </div>
   )
 }
 
-export default Toolbar
+export default Taskbar
