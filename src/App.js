@@ -23,7 +23,7 @@ function App() {
     <div className="main-container">
       <Header />
       <SoftwareGrid items={state} />
-      <SoftwareTemplate />
+      <SoftwareTemplate software={<Game />}/>
       <Taskbar />
     </div>
   );

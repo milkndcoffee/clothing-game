@@ -26,8 +26,20 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
   align-items: center;
   background-color: teal;
   /*cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto;*/
-  
 }
+*.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .container-header{
   
 }
@@ -49,7 +61,12 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
   margin: .2rem;
   text-align: center;
 }
+#software-id {
+  position: absolute;
+  z-index: 9;
+}
 .software-container{
+  position: absolute;
   width: auto;
   background-color: silver;
   border-top: #dcdcdcc9 2.4px solid;
