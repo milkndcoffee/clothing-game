@@ -14,7 +14,7 @@ audio.addEventListener('ended',function(){
 const Game = () => {
   return (
     <section className='game-container'>
-      <img src={img} ></img>
+      <img src={img} alt='model of character for the game'></img>
     </section>
   )
 }
