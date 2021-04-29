@@ -5,8 +5,8 @@ const SoftwareGrid = (items) => {
     <div className='software-grid-container'>
       <p>{items.length} </p>
       <div className='thumbnail-container'>
-        <img className='thumbnail-template'></img>
-        <p>nyaa</p>
+        <img className='thumbnail-template' alt='clothing-game thumbnail'></img>
+        <p>clothing - game</p>
       </div>
       <div className='thumbnail-container'>
         <img className='thumbnail-template'></img>

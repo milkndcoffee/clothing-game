@@ -6,8 +6,9 @@ import { useRef, useState, useEffect } from 'react'
 
 const SoftwareTemplate = ({ software }) => {
   const [hold, setHold] = useState(false)
-  const [position, setPosition] = useState({ x: window.screen.availWidth / 2.5, y: window.screen.availHeight / 5 }) //rough centering
+  const [position, setPosition] = useState({ x: window.innerWidth / 2.5, y: window.innerHeight / 5 }) //rough centering
   const ref = useRef()
+
 
   // Monitor changes to position state and update DOM
   useEffect(() => {
@@ -17,23 +18,25 @@ const SoftwareTemplate = ({ software }) => {
     }
   }, [position])
 
-  // Update the current position if mouse is down
+  //updating position on hold
   const onMouseMove = (event) => {
     if (hold) {
-        if (position.x <= (window.screen.availWidth - ref.current.clientWidth -8)) {
-          setPosition({
-            x: position.x + event.movementX,
-            y: position.y + event.movementY
-          })
-        console.log(ref.current.clientWidth)
-        } else if(event.movementX <= 0){
-          setPosition({
-            x: position.x + event.movementX,
-            y: position.y + event.movementY
-          })
+      //moving left 
+      if (event.movementX <= 0) {
+        if (position.x >= 2 ) {
+          setPosition({ x: (position.x + event.movementX), y: (position.y + event.movementY) })
+        } else if (event.movementX >= 0) {
+          setPosition({ x: position.x + event.movementX, y: position.y + event.movementY })
         }
-        
-      
+      }
+      //moving right
+      else if (event.movementX >= 0 ) {
+        if (position.x <= window.innerWidth - ref.current.clientWidth - 5) {
+          setPosition({x: (position.x + event.movementX),y: position.y + event.movementY})
+        } else if (event.movementX <= 0) {
+          setPosition({x: position.x + event.movementX, y: position.y + event.movementY})
+        }
+      }
     }
   }
 
@@ -43,7 +46,7 @@ const SoftwareTemplate = ({ software }) => {
         onMouseDown={() => setHold(true)}
         onMouseUp={() => setHold(false)}>
         <div className='beginning' >
-          <p unselectable="on" className='unselectable'>{software.name} {}</p>
+          <p unselectable="on" className='unselectable'>{software.name} { }</p>
         </div>
         <div className='end'>
           <button>O</button>
@@ -56,7 +59,7 @@ const SoftwareTemplate = ({ software }) => {
         </div>
         <hr />
         <div className='software'>
-          {software.app} 
+          {software.app}
         </div>
       </div>
     </div>

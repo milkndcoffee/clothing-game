@@ -44,12 +44,16 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
   
 }
 
-/* Software Related */
+/* Thumbnail Related */
+.thumbnail-template{
+  width: 90px;
+  height: 90px;
+  background-color: gray;
+}
 .software-grid-container{
   left: 0;
   top: 0;
   position:fixed;
-  background-color: green;
   width: 20vw;
   display: flex;
   margin: 1rem;
@@ -58,9 +62,17 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
 .thumbnail-container{
   display: flex;
   flex-direction: column;
-  margin: .2rem;
+  margin: .4rem;
   text-align: center;
+} .thumbnail-container p{
+  font-size: 10pt;
+  max-width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
+
+/* Software Related */
 #software-id {
   position: absolute;
   z-index: 9;
@@ -77,13 +89,12 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
 .software-container header{
   position: relative;
   background-color: rgb(110, 110, 110);
-  
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   color: white;
   background-color: #0909a3;
-  padding: .1rem .2rem;
+  padding: .4rem .2rem;
 } 
 .software-container header button{
   width: 30px;
@@ -139,8 +150,3 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
   height: auto;
 }
 
-.thumbnail-template{
-  width: 50px;
-  height: 50px;
-  background-color: gray;
-}
