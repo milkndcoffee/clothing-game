@@ -40,9 +40,6 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
   user-select: none;
 }
 
-.container-header{
-  
-}
 
 /* Thumbnail Related */
 .thumbnail-template{
@@ -127,7 +124,7 @@ hr{margin: auto; margin-bottom: .1rem; margin-top: .1rem; padding: 0; width: 98%
   width: 100%;
   position: fixed;
   bottom: 0;
-  height: 45px;
+  height: 55px;
   align-self: end;
   display: flex; 
   align-items: center;

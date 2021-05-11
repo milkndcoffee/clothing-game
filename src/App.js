@@ -6,17 +6,19 @@ import SoftwareGrid from './components/SoftwareGrid';
 import SoftwareTemplate from './components/SoftwareTemplate';
 
 const state = {
-  softwares:[
+  softwareData:[
     {
       id: 0,
       name: 'clothing-game',
       thumbnail_dir: '',
-      app: <GameApp />
+      thumbnail_alt: 'clothing game thumbnail',
+      app: <GameApp />,
     },
     {
       id:1,
       name: 'music',
       thumbnail_dir: '',
+      thumbnail_alt: 'music player thumbnail',
       app: 'idk'
     }
   ]
@@ -26,8 +28,7 @@ function App() {
   return (
     <div className="main-container unselectable">
       <Header />
-      <SoftwareGrid items={state} />
-      <SoftwareTemplate software={state.softwares[0]} />
+      <SoftwareGrid softwares={state.softwareData} />
       <Taskbar />
     </div>
   );

@@ -37,6 +37,7 @@ const SoftwareTemplate = ({ software }) => {
           setPosition({x: position.x + event.movementX, y: position.y + event.movementY})
         }
       }
+
     }
   }
 
